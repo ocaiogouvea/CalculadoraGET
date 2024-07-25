@@ -1,0 +1,266 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('../images/profile1.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+}
+
+/* Estilo do cabeçalho */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-align: right;
+}
+
+#logo {
+    width: 100px;
+}
+
+/* Configurações principais do container */
+#container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto; /* Isso centraliza o container horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Tornar o fundo ligeiramente transparente para um toque delicado */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    color: black; /* Texto preto para leitura clara */
+    border: 2px solid #f0c14b; /* Borda dourada para destacar */
+}
+
+/* Estilos dos títulos */
+#title {
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 2em;
+    color: #d4af37; /* Dourado para o título */
+}
+
+/* Ajustes para caixas de entrada e etiquetas */
+.input-box {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333; /* Cor escura para contraste */
+}
+
+.input-box .input-field {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.input-box .input-field i {
+    margin-right: 10px;
+}
+
+.input-box .input-field input,
+.input-box .input-field select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #d4af37; /* Borda dourada para os campos de entrada */
+    background: transparent;
+    color: black;
+}
+
+/* Botões com efeito degradê dourado */
+button {
+    background: linear-gradient(to right, #d4af37, #e6c200);
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase; /* Letras maiúsculas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #e6c200, #d4af37);
+}
+
+#diet-image {
+    width: 80%; /* Reduzindo o tamanho da imagem */
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Estilo do modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Sombra escura para destaque */
+    justify-content: center;   
+    align-items: center;      
+}
+
+
+.modal-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo translúcido */
+    padding: 20px;
+    border: 2px solid #d4af37; /* Borda dourada */
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.close {
+    color: #d4af37; /* Botão fechar dourado */
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffffff; /* Mudança de cor ao passar o mouse */
+}
+
+.modal input[type="text"], .modal input[type="email"], .modal input[type="text"] {
+    width: calc(100% - 40px); /* Full width com padding */
+    padding: 8px 10px; /* Ajusta o padding dos inputs */
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #f0c14b; /* Borda dourada */
+    background: transparent;
+    color: white;
+    font-size: 0.8em; /* Reduz o tamanho da fonte para melhor legibilidade */
+}
+
+.modal button {
+    background: linear-gradient(to right, #d4af37, #e6c200); /* Degradê dourado para o botão */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 12px; /* Reduz o padding dos botões */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8em; /* Ajusta o tamanho da fonte dos botões */
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.modal button:hover {
+    background: linear-gradient(to right, #e6c200, #d4af37); /* Efeito hover para o botão */
+}
+
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+}
+
+.gold-text {
+    color: #076e2f;
+    font-weight: bold;
+}
+
+.purchase-button {
+    display: inline-block;
+    background: linear-gradient(to right, #d4af37, #e6c200);
+    color: rgb(0, 0, 0);
+    padding: 12px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 20px;
+    font-weight: bolder;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.purchase-button:hover {
+    background: linear-gradient(to right, #e6c200, #d4af37);
+    transform: scale(1.05);
+}
+* {
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura */
+}
+
+@media (max-width: 375px) {
+    #container {
+        width: 95%;
+        max-width: 100%;
+        margin: 10px auto; /* Ajuste para manter centralizado */
+        padding: 10px;
+    }
+
+    #title {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 375px) {
+    #container {
+        width: 95%; /* Adapta a largura, mas mantém centralizado */
+        max-width: 100%;
+        margin: 10px auto; /* Garante centralização */
+        padding: 15px;
+    }
+
+    #title {
+        font-size: 1.5em;
+    }
+
+    .input-box .input-field input,
+    .input-box .input-field select {
+        font-size: 0.8em;
+    }
+
+    button, .purchase-button {
+        font-size: 0.8em;
+        padding: 8px 12px;
+    }
+
+    #diet-image {
+        width: 100%;
+    }
+    @media (max-width: 375px) {
+        .modal-content {
+            padding: 10px;
+            width: 95%;
+        }
+    
+        .modal input[type="text"], .modal input[type="email"] {
+            padding: 8px 10px;
+            font-size: 0.8em;
+        }
+    
+        .modal button {
+            padding: 10px 12px;
+            font-size: 0.8em;
+        }
