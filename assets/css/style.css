@@ -10,7 +10,30 @@ body, html {
     align-items: center; /* Centraliza verticalmente */
     min-height: 100vh;
 }
+#headline {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto; /* Centraliza e adiciona margem */
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo ligeiramente transparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    border: 2px solid #f0c14b; /* Borda dourada */
+}
 
+#headline h1 {
+    font-size: 1.5em;
+    color: #d4af37; /* Dourado para o título */
+    margin: 0;
+}
+
+#headline p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
 /* Estilo do cabeçalho */
 header {
     width: 100%;
