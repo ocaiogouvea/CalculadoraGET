@@ -31,6 +31,7 @@ body, html {
     font-family: 'Georgia', serif;
     font-size: 2em;
     color: #d4af37; /* Dourado para o título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
 /* Ajustes para caixas de entrada e etiquetas */
