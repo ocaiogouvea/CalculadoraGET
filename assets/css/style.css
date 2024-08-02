@@ -10,39 +10,6 @@ body, html {
     align-items: center; /* Centraliza verticalmente */
     min-height: 100vh;
 }
-#headline {
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto 0; /* Adiciona margem superior de 20px e centraliza */
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo ligeiramente transparente */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    color: black;
-    border: 2px solid #f0c14b; /* Borda dourada */
-}
-/* Estilo da Headline */
-#headline {
-    text-align: center;
-    margin-top: 20px;
-}
-
-#headline h1, #headline p {
-    color: #ffffff; /* Texto branco para contraste */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
-    margin: 0;
-    padding: 0;
-}
-
-#headline h1 {
-    font-size: 2em;
-    margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
-}
-
-#headline p {
-    font-size: 1.2em;
-}
 
 /* Configurações principais do container */
 #container {
