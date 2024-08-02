@@ -22,30 +22,26 @@ body, html {
     color: black;
     border: 2px solid #f0c14b; /* Borda dourada */
 }
+/* Estilo da Headline */
+#headline {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#headline h1, #headline p {
+    color: #ffffff; /* Texto branco para contraste */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar o texto */
+    margin: 0;
+    padding: 0;
+}
 
 #headline h1 {
-    font-size: 1.5em;
-    color: #d4af37; /* Dourado para o título */
-    margin: 0;
+    font-size: 2em;
+    margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
 }
 
 #headline p {
-    font-size: 1em;
-    color: #333;
-    margin: 0;
-}
-/* Estilo do cabeçalho */
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    text-align: right;
-}
-
-#logo {
-    width: 100px;
+    font-size: 1.2em;
 }
 
 /* Configurações principais do container */
