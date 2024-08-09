@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 purchaseButton.href = 'https://pay.hotmart.com/S94278980V?checkoutMode=10&_gl=1*1oodc2w*_gcl_aw*R0NMLjE3MTUzNjc4MDYuQ2p3S0NBandpX2V4QmhBOEVpd0Ffa1UxTXVwRGxjUm1TR19BeEN3X0JyUThEMERwVGh1cU81SHBZa3lxSklJa0xVcEJZZk1RZnhuUHVSb0NMOHdRQXZEX0J3RQ..*_gcl_au*MTM3NjEyODYyNi4xNzE0ODQ0NTA4*_ga*MjEwMjIwNjUyOC4xNzE1MzY3Nzkz*_ga_GQH2V1F11Q*MTcyMTgzODY0Mi4yMjEuMS4xNzIxODM5MDQ0LjIyLjAuMA..&bid=1721839067208';
                 break;
             case '1500':
-                purchaseButton.href = 'https://pay.hotmart.com/X94514490P?checkoutMode=10&_gl=1*1ejhzgx*_gcl_aw*R0NMLjE3MTUzNjc4MDYuQ2p3S0NBandpX2V4QmhBOEVpd0Ffa1UxTXVwRGxjUm1TR19BeEN3X0JyUThEMERwVGh1cU81SHBZa3lxSklJa0xVcEJZZk1RZnhuUHVSb0NMOHdRQXZEX0J3RQ..*_gcl_au*MTM3NjEyODYyNi4xNzE0ODQ0NTA4*_ga*MjEwMjIwNjUyOC4xNzE1MzY3Nzkz*_ga_GQH2V1F11Q*MTcyMTgzODY0Mi4yMjEuMS4xNzIxODM5MTI1LjIuMC4w&bid=1721839183569';
+                purchaseButton.href = 'https://www.nutripalomandrade.com/Cardapio1500';
                 break;
             case '1600':
                 purchaseButton.href = 'https://pay.hotmart.com/L94514697U?checkoutMode=10&_gl=1*1qd0ay9*_gcl_aw*R0NMLjE3MTUzNjc4MDYuQ2p3S0NBandpX2V4QmhBOEVpd0Ffa1UxTXVwRGxjUm1TR19BeEN3X0JyUThEMERwVGh1cU81SHBZa3lxSklJa0xVcEJZZk1RZnhuUHVSb0NMOHdRQXZEX0J3RQ..*_gcl_au*MTM3NjEyODYyNi4xNzE0ODQ0NTA4*_ga*MjEwMjIwNjUyOC4xNzE1MzY3Nzkz*_ga_GQH2V1F11Q*MTcyMTgzODY0Mi4yMjEuMS4xNzIxODM5MjMyLjExLjAuMA..&bid=1721839235404';
