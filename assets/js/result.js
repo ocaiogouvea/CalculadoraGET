@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var calculateButton = localStorage.getItem('calculate');
+    var calculate = localStorage.getItem('calculate'); // Correção da variável
     var dietCalories = localStorage.getItem('dietCalories');
 
     if (calculate && dietCalories) {
-        document.getElementById('calculate').textContent = calculate;
+        document.getElementById('calculate').textContent = calculate + " kcal";
         document.getElementById('diet-calories').textContent = dietCalories + " kcal";
+
+        // Exibe a imagem correspondente às calorias
         document.getElementById('diet-image').src = 'assets/images/MUDE-' + dietCalories + 'kcal.jpg';
 
-       var purchaseButton = document.getElementById('purchase-button');
-       switch (dietCalories) {
+        var purchaseButton = document.getElementById('purchase-button');
+        switch (dietCalories) {
             case '1200':
                 purchaseButton.href = 'https://www.nutripalomandrade.com/Cardapio1200';
                 break;
