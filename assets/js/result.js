@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var calculate = localStorage.getItem('getResult');
+    var calculate = localStorage.getItem('calculate');
     var dietCalories = localStorage.getItem('dietCalories');
 
-    if (getResult && dietCalories) {
-        document.getElementById('get-result').textContent = getResult;
+    if (calculate && dietCalories) {
+        document.getElementById('calculate').textContent = calculate;
         document.getElementById('diet-calories').textContent = dietCalories + " kcal";
         document.getElementById('diet-image').src = 'assets/images/MUDE-' + dietCalories + 'kcal.jpg';
 
