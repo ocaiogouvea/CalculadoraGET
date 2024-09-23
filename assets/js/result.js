@@ -1,14 +1,23 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var calculate = localStorage.getItem('calculate'); // Correção da variável
+    var calculate = localStorage.getItem('calculate');
     var dietCalories = localStorage.getItem('dietCalories');
 
     if (calculate && dietCalories) {
+        // Exibe o cálculo e calorias na tela
         document.getElementById('calculate').textContent = calculate + " kcal";
         document.getElementById('diet-calories').textContent = dietCalories + " kcal";
 
-        // Exibe a imagem correspondente às calorias
-        document.getElementById('diet-image').src = 'assets/images/MUDE-' + dietCalories + 'kcal.jpg';
+        // Verifica se a imagem existe e a exibe
+        var imagePath = 'assets/images/MUDE-' + dietCalories + 'kcal.jpg';
+        var imgElement = document.getElementById('diet-image');
+        
+        // Checa se a imagem existe e exibe
+        imgElement.src = imagePath;
+        imgElement.onerror = function() {
+            imgElement.src = 'assets/images/default.jpg'; // Imagem alternativa caso a principal falhe
+        };
 
+        // Atualiza o botão de compra com o link correto
         var purchaseButton = document.getElementById('purchase-button');
         switch (dietCalories) {
             case '1200':
@@ -42,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 purchaseButton.href = 'https://www.nutripalomandrade.com/Cardapio2100';
                 break;
             default:
-                purchaseButton.href = '#'; // Fallback in case dietCalories is not recognized
+                purchaseButton.href = '#'; // Caso o valor de calorias não corresponda
         }
     } else {
         alert('Erro ao recuperar os dados. Por favor, tente novamente.');
