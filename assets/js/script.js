@@ -13,48 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             if (weight && height && age && activity) {
                 var bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
                 var get = bmr * activity;
-                localStorage.setItem('getResult', get.toFixed(2));
+                localStorage.setItem('calculate', get.toFixed(2));
                 document.getElementById('leadModal').style.display = 'flex'; // Exibe o modal
             } else {
                 alert('Por favor, preencha todos os campos corretamente.');
             }
-        });
-    }
-
-    if (submitLeadButton) {
-        submitLeadButton.addEventListener('click', async function() {
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var whatsapp = document.getElementById('whatsapp').value;
-
-            if (name && email && whatsapp) {
-                const leadData = { name, email, whatsapp };
-
-                try {
-                    const response = await fetch('http://localhost:5000/api/leads', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(leadData),
-                    });
-
-                    if (response.ok) {
-                        document.getElementById('leadModal').style.display = 'none';
-                        window.location.href = 'resultado.html';
-                    } else {
-                        alert('Erro ao enviar os dados. Tente novamente.');
-                    }
-                } catch (error) {
-                    alert('Erro no servidor. Tente novamente mais tarde.');
-                }
-            } else {
-                alert('Por favor, preencha todos os campos para continuar.');
-            }
-        });
-    }
-
-    if (closeLeadModal) {
-        closeLeadModal.addEventListener('click', function() {
-            document.getElementById('leadModal').style.display = 'none'; // Fecha o modal
         });
     }
 
@@ -69,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
                 var get = bmr * activity;
 
-                localStorage.setItem('getResult', get.toFixed(2));
+                localStorage.setItem('calculate', get.toFixed(2));
 
                 var deficit;
                 if (get <= 1800) {
@@ -101,11 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Para resultado.html
     if (window.location.pathname.includes('resultado.html')) {
-        var getResult = localStorage.getItem('getResult');
+        var calculateButton = localStorage.getItem('calculate');
         var dietCalories = localStorage.getItem('dietCalories');
 
         if (getResult && dietCalories) {
-            document.getElementById('get-result').textContent = getResult;
+            document.getElementById('calculate').textContent = calculate;
             document.getElementById('diet-calories').textContent = dietCalories + " kcal";
             document.getElementById('diet-image').src = 'assets/images/MUDE-' + dietCalories + 'kcal.jpg';
 
