@@ -4,64 +4,46 @@ document.addEventListener('DOMContentLoaded', function() {
     var closeLeadModal = document.querySelector('.close');
 
     if (calculateButton) {
-        calculateButton.addEventListener('click', function() {
-            var weight = parseFloat(document.getElementById('weight').value);
-            var height = parseFloat(document.getElementById('height').value);
-            var age = parseInt(document.getElementById('age').value);
-            var activity = parseFloat(document.getElementById('activity').value);
+    calculateButton.addEventListener('click', function() {
+        var weight = parseFloat(document.getElementById('weight').value);
+        var height = parseFloat(document.getElementById('height').value);
+        var age = parseInt(document.getElementById('age').value);
+        var activity = parseFloat(document.getElementById('activity').value);
 
-            if (weight && height && age && activity) {
-                var bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
-                var get = bmr * activity;
-                localStorage.setItem('calculate', get.toFixed(2));
-                document.getElementById('leadModal').style.display = 'flex'; // Exibe o modal
+        if (weight && height && age && activity) {
+            var bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+            var get = bmr * activity;
+
+            localStorage.setItem('calculate', get.toFixed(2));
+
+            var deficit;
+            if (get <= 1800) {
+                deficit = 350;
+            } else if (get <= 2200) {
+                deficit = 500;
+            } else if (get <= 2650) {
+                deficit = 550;
             } else {
-                alert('Por favor, preencha todos os campos corretamente.');
+                deficit = get - 2100;
             }
-        });
-    }
 
-    if (submitLeadButton) {
-        submitLeadButton.addEventListener('click', function() {
-            var weight = parseFloat(document.getElementById('weight').value);
-            var height = parseFloat(document.getElementById('height').value);
-            var age = parseInt(document.getElementById('age').value);
-            var activity = parseFloat(document.getElementById('activity').value);
+            var dietCalories = Math.round((get - deficit) / 100) * 100;
 
-            if (weight && height && age && activity) {
-                var bmr = 655 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
-                var get = bmr * activity;
-
-                localStorage.setItem('calculate', get.toFixed(2));
-
-                var deficit;
-                if (get <= 1800) {
-                    deficit = 350;
-                } else if (get <= 2200) {
-                    deficit = 500;
-                } else if (get <= 2650) {
-                    deficit = 550;
-                } else {
-                    deficit = get - 2100;
-                }
-
-                var dietCalories = Math.round((get - deficit) / 100) * 100;
-
-                if (dietCalories < 1200) {
-                    dietCalories = 1200;
-                } else if (dietCalories > 2100) {
-                    dietCalories = 2100;
-                }
-
-                localStorage.setItem('dietCalories', dietCalories);
-
-                window.location.href = 'resultado.html';
-            } else {
-                alert('Por favor, preencha todos os campos.');
+            if (dietCalories < 1200) {
+                dietCalories = 1200;
+            } else if (dietCalories > 2100) {
+                dietCalories = 2100;
             }
-        });
-    }
 
+            localStorage.setItem('dietCalories', dietCalories);
+
+            // Redireciona para a página de resultados
+            window.location.href = 'resultado.html';
+        } else {
+            alert('Por favor, preencha todos os campos corretamente.');
+        }
+    });
+}
     // Para resultado.html
     if (window.location.pathname.includes('resultado.html')) {
         var calculateButton = localStorage.getItem('calculate');
