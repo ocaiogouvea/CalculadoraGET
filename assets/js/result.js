@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var getResult = localStorage.getItem('getResult');
+    var calculate = localStorage.getItem('getResult');
     var dietCalories = localStorage.getItem('dietCalories');
 
     if (getResult && dietCalories) {
