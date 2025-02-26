@@ -95,10 +95,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var purchaseButton = document.getElementById('purchase-button');
         switch (dietCalories) {
             case '1200':
-                purchaseButton.href = 'https://pay.hotmart.com/J94228920E?off=6gi9ap4b&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/J94228920E?off=y0dj6gdn&checkoutMode=10';
                 break;
             case '1300':
-                purchaseButton.href = 'https://pay.hotmart.com/E94277222V?off=quxdeonb&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/E94277222V?off=0bijp2gt&checkoutMode=10';
                 break;
             case '1400':
                 purchaseButton.href = 'https://pay.hotmart.com/S94278980V?off=b8qa24bp&checkoutMode=10';
