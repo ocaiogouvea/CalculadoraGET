@@ -95,34 +95,34 @@ document.addEventListener('DOMContentLoaded', function () {
         var purchaseButton = document.getElementById('purchase-button');
         switch (dietCalories) {
             case '1200':
-                purchaseButton.href = 'https://pay.hotmart.com/J94228920E?off=y0dj6gdn&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/J94228920E?off=y0dj6gdn&checkoutMode=10&bid=1740603694437';
                 break;
             case '1300':
-                purchaseButton.href = 'https://pay.hotmart.com/E94277222V?off=0bijp2gt&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/E94277222V?off=0bijp2gt&checkoutMode=10&bid=1740603875554';
                 break;
             case '1400':
-                purchaseButton.href = 'https://pay.hotmart.com/S94278980V?off=b8qa24bp&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/S94278980V?off=nbuumi9z&checkoutMode=10&bid=1740603764267';
                 break;
             case '1500':
-                purchaseButton.href = 'https://pay.hotmart.com/X94514490P?off=1tqmkmy4&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/X94514490P?off=pklek34t&checkoutMode=10&bid=1740603769901';
                 break;
             case '1600':
-                purchaseButton.href = 'https://pay.hotmart.com/L94514697U?off=xbgznulx&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/L94514697U?off=m5xs47ls&checkoutMode=10&bid=1740603776455';
                 break;
             case '1700':
-                purchaseButton.href = 'https://pay.hotmart.com/K94514843P?off=zens5kg9&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/K94514843P?off=hiyhe97y&checkoutMode=10&bid=1740603787400';
                 break;
             case '1800':
-                purchaseButton.href = 'https://pay.hotmart.com/P94531606S?off=ngcvyt5s&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/P94531606S?off=0kwh208h&checkoutMode=10&bid=1740603799223';
                 break;
             case '1900':
-                purchaseButton.href = 'https://pay.hotmart.com/Q94531691C?off=e4km9yv8&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/Q94531691C?off=kw1fy07y&checkoutMode=10&bid=1740603809354';
                 break;
             case '2000':
-                purchaseButton.href = 'https://pay.hotmart.com/G94531836C?off=scoatfjs&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/G94531836C?off=i23dtfu1&checkoutMode=10&bid=1740603820177';
                 break;
             case '2100':
-                purchaseButton.href = 'https://pay.hotmart.com/J94531923W?off=3dvn84ki&checkoutMode=10';
+                purchaseButton.href = 'https://pay.hotmart.com/J94531923W?off=6rfpdpul&checkoutMode=10&bid=1740603827987';
                 break;
             default:
                 purchaseButton.href = '#';
