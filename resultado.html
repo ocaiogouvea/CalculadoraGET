@@ -1,28 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Seu cardápio está pronto · Paloma Andrade</title>
+    <meta name="theme-color" content="#FAF8F4">
+    <meta name="robots" content="noindex">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1521204025356996');
+        fbq('track', 'PageView');
+        fbq('trackCustom', 'ResultadoCalculadora');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1521204025356996&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
 </head>
-<body>
-    <!-- Logo acima do container -->
-    <img src="imagens/logo.png" alt="Logo Paloma Andrade" class="logo">
-    <div class="container">
-        <!-- Resultado do GET -->
-        <p id="get-result" class="calorie-info"></p>
+<body class="has-sticky">
+    <main class="wrap">
+        <div class="top reveal"><img src="imagens/logo.png" alt="Paloma Andrade" class="logo"></div>
 
-        <h1>Sua dieta está pront com o Déficit calórico para o seu emagrecimento já aplicado!</h1>
-        
-        <!-- Imagem do Plano Alimentar -->
-        <img src="imagens/cardapio.png" alt="Plano Alimentar" class="menu-image">
+        <div class="badge reveal d1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFC83D"/><path d="M7 12.5l3.2 3L17 9" stroke="#1C1916" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cálculo concluído
+        </div>
+        <h1 class="reveal d1">Seu cardápio já vem com o déficit calórico aplicado</h1>
+        <p class="lead reveal d2">Você não precisa fazer conta nenhuma... é só seguir o cardápio que o seu corpo entra no ritmo do emagrecimento</p>
 
-        <!-- Botão Único para Adquirir -->
-        <a id="purchase-button" class="button" href="#" target="_blank">Adquirir Plano Alimentar</a>
+        <!-- A conta do déficit -->
+        <section class="equation reveal d3" aria-label="Resumo do seu cálculo">
+            <div class="row">
+                <span class="label">Seu corpo gasta por dia<small>gasto energético total</small></span>
+                <span class="num"><span id="get-result" class="calorie-info" data-count>0</span><em>kcal</em></span>
+            </div>
+            <div class="row minus" id="deficitRow">
+                <span class="label">Déficit para emagrecer<small>já calculado para o seu corpo</small></span>
+                <span class="num">−<span id="deficit-result" data-count>0</span><em>kcal</em></span>
+            </div>
+            <div class="row total">
+                <span class="label">Calorias do seu cardápio</span>
+                <span class="num"><span id="diet-result" data-count>0</span><em>kcal</em></span>
+            </div>
+            <div class="applied">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFC83D"/><path d="M7 12.5l3.2 3L17 9" stroke="#1C1916" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span>O déficit já está dentro do cardápio de <b class="js-plan">...</b> kcal. Você come a quantidade certa para emagrecer sem precisar calcular nada</span>
+            </div>
+        </section>
+
+        <!-- Cardápio -->
+        <section class="menu">
+            <h2>Seu plano alimentar de <span class="js-plan">...</span> kcal</h2>
+            <p>Montado com as calorias que o seu resultado pediu</p>
+
+            <div class="menu-frame">
+                <span class="menu-tag">Déficit já aplicado</span>
+                <img src="imagens/cardapio.png" alt="Exemplo do plano alimentar" class="menu-image">
+            </div>
+
+            <ul class="points">
+                <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFF3CF"/><path d="M7 12.5l3.2 3L17 9" stroke="#1C1916" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Calorias calculadas a partir do seu peso, altura, idade e rotina</span></li>
+                <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFF3CF"/><path d="M7 12.5l3.2 3L17 9" stroke="#1C1916" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Déficit calórico já aplicado... é só seguir</span></li>
+                <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#FFF3CF"/><path d="M7 12.5l3.2 3L17 9" stroke="#1C1916" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Sem contar caloria e sem dúvida na hora de montar o prato</span></li>
+            </ul>
+
+            <a id="purchase-button" class="button gold js-checkout" href="#" target="_blank" rel="noopener">Quero meu cardápio</a>
+            <a class="redo" href="index.html">Refazer o cálculo</a>
+        </section>
+
+        <p class="note">Cálculo estimado pela fórmula de Harris-Benedict para mulheres. Os valores são uma referência para o seu plano alimentar</p>
+    </main>
+
+    <div class="sticky" id="stickyBar">
+        <div class="sticky-info"><span>Seu cardápio</span><b><span class="js-plan">...</span> kcal · déficit aplicado</b></div>
+        <a class="button gold js-checkout" href="#" target="_blank" rel="noopener">Quero meu cardápio</a>
     </div>
 
-    <!-- Script principal -->
+    <!-- Script principal (precisa vir ANTES do rastreio UTM) -->
     <script src="script.js"></script>
 
     <!-- Script de rastreio UTM -->
